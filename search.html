@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Search Algorithms Visualization</title>
+  <link rel="stylesheet" href="css/search.css">
+</head>
+<body>
+  <div id="search-page">
+    <h1>Search Visualizer</h1>
+    <p><a href="index.html">← Back to home</a></p>
+    <input type="text" id="userInput" placeholder="Enter numbers separated by commas">
+    <input type="text" id="targetInput" placeholder="Target value to find">
+    <select id="algorithm">
+      <option value="linear">Linear Search</option>
+      <option value="binary">Binary Search</option>
+      <option value="race">Compare Race (Linear vs Binary)</option>
+    </select>
+    <button id="startBtn">Start</button>
+    <button id="exampleBtn">Run Example</button>
+    <div id="visualizer"></div>
+    <p id="explanationText"></p>
+
+    <!-- Algorithm Code Section -->
+    <div id="code-section">
+      <h2>Algorithm Code</h2>
+      <pre id="algorithm-code"></pre>
+    </div>
+  </div>
+
+  <script src="js/search.js"></script>
+</body>
+</html>

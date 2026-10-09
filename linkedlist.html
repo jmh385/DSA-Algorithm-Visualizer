@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Linked List Visualization</title>
+<link rel="stylesheet" href="css/linkedlist.css">
+</head>
+<body>
+
+<header>
+  <h1>LINKED LIST VISUALIZER</h1>
+  <p><a href="index.html">← Back to home</a></p>
+</header>
+
+<div id="linkedlist-layout">
+<div id="controls">
+  <div>
+    <label for="insertInput">Value to insert:</label>
+    <input type="number" id="insertInput" placeholder="e.g. 42" />
+    <label for="positionInput">Position (1-based):</label>
+    <input type="number" id="positionInput" placeholder="e.g. 2" />
+    <button id="insertHeadBtn">Insert Head</button>
+    <button id="insertTailBtn">Insert Tail</button>
+    <button id="insertAtBtn">Insert At Position</button>
+  </div>
+
+  <div>
+    <label for="deleteInput">Delete operations:</label>
+    <input type="number" id="deleteInput" placeholder="value to delete" />
+    <button id="deleteHeadBtn">Delete Head</button>
+    <button id="deleteTailBtn">Delete Tail</button>
+    <button id="deleteValueBtn">Delete Value</button>
+  </div>
+
+  <div>
+    <label for="searchInput">Search value:</label>
+    <input type="number" id="searchInput" placeholder="e.g. 20" />
+    <button id="searchBtn">Search</button>
+    <button id="traverseBtn">Traverse List</button>
+  </div>
+
+  <div>
+    <label for="operationSelect">Show code for:</label>
+    <select id="operationSelect">
+      <option value="insert">Insert</option>
+      <option value="delete">Delete</option>
+      <option value="search">Search</option>
+      <option value="traverse">Traverse</option>
+      <option value="demo">Demo Sequence</option>
+    </select>
+    <button id="demoBtn">Run Demo Sequence</button>
+  </div>
+</div>
+
+<div id="stage">
+<div id="listStatus"></div>
+<div id="visualizer"></div>
+</div>
+</div>
+<div id="explanationText"></div>
+<div id="code-section">
+  <h2>Algorithm Code</h2>
+  <pre id="algorithm-code"></pre>
+</div>
+
+<script src="js/linkedlist.js"></script>
+</body>
+</html>

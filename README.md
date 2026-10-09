@@ -13,6 +13,11 @@ An interactive web-based platform for visualizing data structures and algorithms
 - **Merge Sort** - Divide and conquer approach
 - **Quick Sort** - Partition-based sorting
 
+### 🔍 Searching Algorithms
+- **Linear Search** - Step-by-step scan with comparison count
+- **Binary Search** - Low/high/mid range narrowing (auto-sorts input)
+- **Compare Race** - Side-by-side linear vs binary with live counters and verdict
+
 ### 📊 Graph Algorithms
 - **Breadth-First Search (BFS)** - Level-by-level traversal
 - **Depth-First Search (DFS)** - Deep exploration with backtracking
@@ -29,6 +34,20 @@ An interactive web-based platform for visualizing data structures and algorithms
 - **Tower of Hanoi** - Recursive disk movement puzzle
 - **Traveling Salesman Problem** - Route optimization
 - **Knapsack Problem** - Dynamic programming solution
+
+### 🥞 Stack Operations
+- **Push / Pop / Peek** - Core LIFO operations with animations
+- **Scripted Demo** - Auto-played push/pop sequence with narration
+
+### 📥 Queue Operations
+- **Enqueue / Dequeue / Peek** - Core FIFO operations with animations
+- **Reverse Demo** - Queue reversal animated with a helper stack
+- **Scripted Demo** - Auto-played enqueue/dequeue sequence with narration
+
+### 🔗 Linked List Operations
+- **Insert Head / Tail / At Position** - Pointer-splice animations
+- **Delete Head / Tail / By Value** - Relink narration with NULL terminator
+- **Search & Traverse** - Walking-pointer animations with narration
 
 ## 🚀 Getting Started
 
@@ -84,21 +103,35 @@ npx serve .
 
 ```
 dsa-algorithm-visualizer/
-├── index.html              # Main landing page
-├── sorting.html            # Sorting algorithms interface
+├── index.html              # Main landing page (with embedded sorting visualizer)
+├── sorting.html            # Standalone sorting algorithms page
+├── search.html              # Searching algorithms + compare race page
 ├── graph.html             # Graph algorithms interface
 ├── tree.html              # Tree operations interface
 ├── rw.html                # Classic problems interface
+├── stack.html             # Stack visualizer interface
+├── queue.html             # Queue visualizer interface
+├── linkedlist.html        # Linked list visualizer interface
 ├── css/
-│   ├── style.css          # Main styling
-│   └── rw.css             # Classic problems styling
+│   ├── style.css          # Landing + sorting styling
+│   ├── graph.css          # Graph page styling
+│   ├── tree.css           # Tree page styling
+│   ├── rw.css             # Classic problems styling
+│   ├── stack.css          # Stack page styling
+│   ├── queue.css          # Queue page styling
+│   ├── linkedlist.css     # Linked list page styling
+│   └── search.css         # Searching page styling
 ├── js/
-│   ├── script.js          # Sorting algorithms logic
+│   ├── sorting.js         # Sorting algorithms logic
 │   ├── graph.js           # Graph algorithms implementation
 │   ├── tree.js            # Tree operations logic
-│   └── rw.js              # Classic problems implementation
+│   ├── rw.js              # Classic problems implementation
+│   ├── stack.js           # Stack operations logic
+│   ├── queue.js           # Queue operations logic
+│   ├── linkedlist.js      # Linked list operations logic
+│   └── search.js          # Searching algorithms logic
 ├── assets/
-│   ├── 1.jpg              # Background image
+│   ├── 1.png              # Background image
 │   └── 3.jpg              # Background image
 └── README.md
 ```

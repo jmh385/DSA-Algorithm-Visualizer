@@ -1,0 +1,81 @@
+@import url("style.css");
+
+/* Search page only: bar look, controls and code section come
+   from style.css. Adds race panels + search markers. */
+
+/* Race mode: two bar panels stepping side by side */
+#search-page .race-panels {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: stretch;
+  width: 100%;
+}
+
+#search-page .race-panel {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  min-width: 0;
+}
+
+#search-page .race-title {
+  font-weight: bold;
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 4px;
+}
+
+#search-page .race-count {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 8px;
+}
+
+#search-page .race-bars {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  height: 220px;
+  overflow: hidden;
+}
+
+#search-page .race-verdict {
+  margin-top: 12px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 8px;
+  padding: 10px 16px;
+  display: inline-block;
+}
+
+/* Search markers (single + race modes) */
+#search-page .bar.checked {
+  background-color: #87cefa; /* light blue: already compared */
+}
+
+#search-page .bar.eliminated {
+  background-color: #e0e0e0; /* grey: ruled out by binary search */
+}
+
+#search-page .bar.eliminated:hover {
+  transform: none;
+  background-color: #e0e0e0;
+}
+
+#search-page .bar.mid {
+  background-color: red !important; /* current midpoint / probe */
+}
+
+@media (max-width: 700px) {
+  #search-page .race-panels {
+    flex-direction: column;
+  }
+}

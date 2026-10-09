@@ -1,53 +1,10 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Algorithm Visualizer</title>
-  <link rel="stylesheet" href="style.css">
-  <style>
-    /* Additional styles for the welcome page */
-    .welcome-container {
-      text-align: center;
-      margin-top: 100px;
-    }
-
-    .welcome-title {
-      font-size: 50px;
-      color: #000000;
-    }
-
-    .options {
-      display: flex;
-      justify-content: center;
-      gap: 30px;
-      margin-top: 50px;
-    }
-    .option1 {
-    display: flex;
-    justify-content: center; 
-    gap: 30px; 
-    margin-top: 30px;
-    transform: translateX(12px); 
-}
-
-
-    .option {
-      text-decoration: none;
-      padding: 20px 30px;
-      background-color: #fdec06;
-      color: rgb(0, 0, 0);
-      font-size: 18px;
-      font-weight: bold;
-      border-radius: 10px;
-      box-shadow: 0 4px 6px rgba(255, 254, 254, 0.2);
-      transition: transform 0.3s, background-color 0.3s;
-    }
-
-    .option:hover {
-      background-color: #f9f5f5;
-      transform: translateY(-5px);
-    }
-  </style>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
   <div id="welcome-screen" class="welcome-container">
@@ -56,13 +13,17 @@
       <a href="#" class="option" id="sorting-option">Sorting Algorithms</a>
       <a href="graph.html" class="option" id="graph-option">Graph Algorithms</a>
       <a href="tree.html" class="option" id="tree-option">Tree Algorithms</a>
+      <a href="search.html" class="option" id="search-page-link">Searching Algorithms</a>
     </div>
     <div class="option1">
+      <a href="stack.html" class="option" id="stack-page">Stack Visualizer</a>
+      <a href="queue.html" class="option" id="queue-page">Queue Visualizer</a>
+      <a href="linkedlist.html" class="option" id="linkedlist-page">Linked List Visualizer</a>
       <a href="rw.html" class="option" id="Real-World">Real world problems</a>
     </div>
   </div>
 
-  <div id="sorting-visualizer" style="display: none;">
+  <div id="sorting-visualizer">
     <h1>Sorting Visualizer</h1>
     <input type="text" id="userInput" placeholder="Enter numbers separated by commas">
     <select id="algorithm">
@@ -73,6 +34,7 @@
       <option value="merge">Merge Sort</option>
     </select>
     <button id="startBtn">Start</button>
+    <button id="exampleBtn">Run Example</button>
     <div id="visualizer"></div>
     <p id="explanationText"></p>
 
@@ -83,6 +45,6 @@
     </div>
   </div>
 
-  <script src="script.js"></script>
+  <script src="js/sorting.js"></script>
 </body>
 </html>

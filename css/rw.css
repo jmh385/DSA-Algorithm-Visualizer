@@ -1,0 +1,77 @@
+@import url("style.css");
+
+/* RW page only: everything shared (reset, shell, controls,
+   explanation) comes from style.css */
+
+body {
+  margin: 0;
+  padding: 0;
+  line-height: normal;
+}
+
+#explanationText {
+  margin-bottom: 20px;
+}
+
+#extraTables {
+  width: 100%;
+  max-width: 900px;
+  margin-bottom: 20px;
+}
+
+.temp-edge {
+  stroke-width: 3;
+  stroke: red;
+  opacity: 0.8;
+  pointer-events: none;
+}
+
+/* Table styling */
+#extraTables table {
+  border-collapse: collapse;
+  margin-top: 10px;
+  width: 100%;
+}
+#extraTables td,
+#extraTables th {
+  border: 1px solid #ccc;
+  padding: 5px;
+  text-align: center;
+}
+
+/* Tower of Hanoi Specific Styles */
+#hanoiVisualizer .peg {
+  position: absolute;
+  bottom: 0;
+  width: 10px;
+  height: 150px;
+  background-color: #333;
+}
+
+#hanoiVisualizer .disk {
+  position: absolute;
+  height: 20px;
+  background-color: #4caf50;
+  border: 1px solid #333;
+  border-radius: 5px;
+  color: white;
+  text-align: center;
+  line-height: 20px;
+  font-weight: bold;
+  transition:
+    left 0.5s,
+    top 0.5s;
+}
+
+/* Knapsack Problem Specific Styles */
+#knapsackVisualizer table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#knapsackVisualizer td,
+#knapsackVisualizer th {
+  border: 1px solid #ccc;
+  padding: 5px;
+  text-align: center;
+}

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Queue Visualization</title>
+<link rel="stylesheet" href="css/queue.css">
+</head>
+<body>
+
+<header>
+  <h1>QUEUE VISUALIZER (FIFO)</h1>
+  <p><a href="index.html">← Back to home</a></p>
+</header>
+
+<div id="queue-layout">
+<div id="controls">
+  <div>
+    <label for="enqueueInput">Value to enqueue:</label>
+    <input type="number" id="enqueueInput" placeholder="e.g. 42" />
+    <button id="enqueueBtn">Enqueue</button>
+  </div>
+
+  <div>
+    <label>Queue operations:</label>
+    <button id="dequeueBtn">Dequeue</button>
+    <button id="peekBtn">Peek</button>
+    <button id="clearBtn">Clear</button>
+  </div>
+
+  <div>
+    <label>Reverse with a helper stack:</label>
+    <button id="reverseBtn">Reverse Queue</button>
+  </div>
+
+  <div>
+    <label for="findInput">Find value (rotation search):</label>
+    <input type="number" id="findInput" placeholder="e.g. 20" />
+    <button id="findBtn">Find</button>
+  </div>
+
+  <div>
+    <label for="operationSelect">Show code for:</label>
+    <select id="operationSelect">
+      <option value="enqueue">Enqueue</option>
+      <option value="dequeue">Dequeue</option>
+      <option value="peek">Peek</option>
+      <option value="reverse">Reverse (Stack Demo)</option>
+      <option value="find">Find (Rotation Search)</option>
+      <option value="demo">Demo Sequence</option>
+    </select>
+    <button id="demoBtn">Run Demo Sequence</button>
+  </div>
+</div>
+
+<div id="stage">
+<div id="queueStatus"></div>
+<div id="visualizer"></div>
+</div>
+</div>
+<div id="explanationText"></div>
+<div id="code-section">
+  <h2>Algorithm Code</h2>
+  <pre id="algorithm-code"></pre>
+</div>
+
+<script src="js/queue.js"></script>
+</body>
+</html>

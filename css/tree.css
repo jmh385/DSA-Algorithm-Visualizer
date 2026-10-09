@@ -1,0 +1,65 @@
+@import url("style.css");
+
+/* Tree page only: everything shared (reset, shell, controls,
+   visualizer card, explanation) comes from style.css */
+
+body {
+  padding: 20px;
+  background: url('../assets/3.jpg') no-repeat center center fixed;
+  background-size: cover;
+}
+
+/* Wider code section than the shared default */
+#code-section {
+  width: 80%;
+}
+
+pre {
+  font-size: 20px;
+}
+
+/* Node Styles */
+.node-circle {
+  fill: #4caf50;
+  stroke: #333;
+  stroke-width: 1.5;
+  transition:
+    fill 0.5s ease,
+    stroke 0.5s ease;
+}
+
+.node-text {
+  fill: #fff;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+/* Highlights */
+.node-visited {
+  fill: #ffa726 !important; /* visited */
+}
+
+.node-current {
+  fill: #29b6f6 !important; /* current consideration */
+  stroke: #2196f3;
+  stroke-width: 2;
+}
+
+.node-final {
+  fill: #f44336 !important; /* final highlighted node (found node) */
+  stroke: #e53935;
+  stroke-width: 2;
+}
+
+/* Edges */
+.edge-line {
+  stroke: #aaa;
+  stroke-width: 2;
+  fill: none;
+  transition: all 0.3s ease;
+}
+
+.edge-highlight {
+  stroke: #f44336 !important; /* highlight visited path edges */
+  stroke-width: 3 !important;
+}

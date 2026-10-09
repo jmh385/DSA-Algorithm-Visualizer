@@ -1,0 +1,174 @@
+@import url("style.css");
+
+/* Queue page only: shell, controls, duo view, status, code section
+   and empty states come from style.css */
+
+body {
+  padding: 20px;
+}
+
+header {
+  padding: 12px;
+  margin-bottom: 16px;
+  max-width: 1200px;
+}
+
+header h1 {
+  font-size: 1.6em;
+}
+
+header p {
+  margin: 0;
+  font-size: 14px;
+}
+
+header p a {
+  color: white;
+}
+
+/* Taller viewport-sized visualizer for the queue */
+#visualizer {
+  height: min(62vh, 560px);
+  min-height: 320px;
+}
+
+#explanationText {
+  max-width: 1200px;
+}
+
+/* Queue Rendering (left-anchored horizontal row: FRONT on the left) */
+.queue-container {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 20px;
+  gap: 8px;
+  overflow-x: auto;
+}
+
+.queue-item {
+  min-width: 64px;
+  padding: 12px 16px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 18px;
+  color: white;
+  background-color: #4caf50;
+  border: 2px solid #388e3c;
+  border-radius: 8px;
+  position: relative;
+  flex-shrink: 0;
+  animation: enqueue-in 0.4s ease;
+}
+
+.queue-item.front {
+  background-color: #2196f3;
+  border-color: #1976d2;
+}
+
+.queue-item.front::before {
+  content: "FRONT";
+  position: absolute;
+  top: -28px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 12px;
+  font-weight: bold;
+  color: #1976d2;
+  white-space: nowrap;
+}
+
+.queue-item.rear::after {
+  content: "REAR";
+  position: absolute;
+  bottom: -28px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 12px;
+  font-weight: bold;
+  color: #388e3c;
+  white-space: nowrap;
+}
+
+.queue-item.peek-flash {
+  background-color: #ffa726;
+  border-color: #f57c00;
+}
+
+.queue-item.found {
+  background-color: #9c27b0;
+  border-color: #7b1fa2;
+}
+
+.queue-item.dequeue-out {
+  animation: dequeue-out 0.4s ease;
+}
+
+/* Horizontal queue pane inside the duo view (duo shell in base) */
+.queue-pane {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.queue-row {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 8px;
+  overflow-x: auto;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+/* Vertical temp-stack pane inside the duo view */
+.temp-pane {
+  display: flex;
+  flex-direction: column;
+  min-width: 160px;
+}
+
+.temp-item {
+  width: 120px;
+  padding: 10px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 16px;
+  color: white;
+  background-color: #4caf50;
+  border: 2px solid #388e3c;
+  border-radius: 8px;
+  animation: enqueue-in 0.4s ease;
+}
+
+@keyframes enqueue-in {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes dequeue-out {
+  to {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+}
+
+#code-section {
+  width: 80%;
+}
+
+pre {
+  font-size: 20px;
+}

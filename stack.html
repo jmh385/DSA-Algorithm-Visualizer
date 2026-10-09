@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Stack Visualization</title>
+<link rel="stylesheet" href="css/stack.css">
+</head>
+<body>
+
+<header>
+  <h1>STACK VISUALIZER (LIFO)</h1>
+  <p><a href="index.html">← Back to home</a></p>
+</header>
+
+<div id="stack-layout">
+<div id="controls">
+  <div>
+    <label for="pushInput">Value to push:</label>
+    <input type="number" id="pushInput" placeholder="e.g. 42" />
+    <button id="pushBtn">Push</button>
+  </div>
+
+  <div>
+    <label>Stack operations:</label>
+    <button id="popBtn">Pop</button>
+    <button id="peekBtn">Peek</button>
+    <button id="clearBtn">Clear</button>
+  </div>
+
+  <div>
+    <label for="findInput">Find value (2-stack search):</label>
+    <input type="number" id="findInput" placeholder="e.g. 20" />
+    <button id="findBtn">Find</button>
+  </div>
+
+  <div>
+    <label for="operationSelect">Show code for:</label>
+    <select id="operationSelect">
+      <option value="push">Push</option>
+      <option value="pop">Pop</option>
+      <option value="peek">Peek</option>
+      <option value="find">Find (2-Stack Search)</option>
+      <option value="demo">Demo Sequence</option>
+    </select>
+    <button id="demoBtn">Run Demo Sequence</button>
+  </div>
+</div>
+
+<div id="stage">
+<div id="stackStatus"></div>
+<div id="visualizer"></div>
+</div>
+</div>
+<div id="explanationText"></div>
+<div id="code-section">
+  <h2>Algorithm Code</h2>
+  <pre id="algorithm-code"></pre>
+</div>
+
+<script src="js/stack.js"></script>
+</body>
+</html>
